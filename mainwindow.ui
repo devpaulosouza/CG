@@ -82,6 +82,7 @@
    <header>glwidget.h</header>
    <slots>
     <slot>toggleBackgroundColor(bool)</slot>
+    <slot>showFileOpenDialog()</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -112,6 +113,22 @@
     <hint type="sourcelabel">
      <x>400</x>
      <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen</sender>
+   <signal>triggered()</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>showFileOpenDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>37</y>
     </hint>
     <hint type="destinationlabel">
      <x>400</x>

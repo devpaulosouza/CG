@@ -1,4 +1,5 @@
 QT       += core gui
+QT      += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,3 +35,16 @@ TRANSLATIONS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    shaders/fgouraud.glsl \
+    shaders/fnormal.glsl \
+    shaders/fphong.glsl \
+    shaders/ftexture.glsl \
+    shaders/vgouraud.glsl \
+    shaders/vnormal.glsl \
+    shaders/vphong.glsl \
+    shaders/vtexture.glsl
+
+RESOURCES += \
+    resources.qrc
